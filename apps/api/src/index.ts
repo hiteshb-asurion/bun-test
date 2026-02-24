@@ -45,7 +45,7 @@ const server = Bun.serve({
 
     // 404 for unknown routes
     return new Response(
-      JSON.stringify({ error: "Not found" }),
+      JSON.stringify({ error: "Not found", message: url.pathname }),
       { status: 404, headers }
     );
   }
